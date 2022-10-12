@@ -95,7 +95,6 @@ body {
 
 
 
-
 .header-link {
     padding: 32px 0;
     display: block;
@@ -108,30 +107,10 @@ body {
 
 }
 
-/* .header-link::before {
-    content: ;
-    position: absolute;
-    width: 48px;
-    height: 4px;
-    left: 451px;
-    top: 76px;
-
-    background: #2196F3;
-    border-radius: 2px;
-} */
 
 .header-link:hover,
 .header-link:focus {
     color: var(--accent-color);
-}
-
-
-
-
-.header-lin,
-.current {
-    color: var(--accent-color);
-
 }
 
 .header-link::after {
@@ -139,7 +118,25 @@ body {
     border-radius: 2px;
 }
 
+.current {
+    color: var(--accent-color);
+    position: relative;
 
+}
+
+.current::after {
+    content: ;
+    position: absolute;
+    width: 48px;
+    height: 4px;
+    background: #2196F3;
+    border-radius: 2px;
+    display: block;
+    left: 0;
+    bottom: 0;
+
+
+}
 
 .list-contacts {
     display: flex;
@@ -350,7 +347,6 @@ body {
     color: var(--primary-white-color);
     font-weight: 700;
     line-height: 16px;
-    text-align: center;
     text-transform: uppercase;
     background-color: rgba(47, 48, 58, 0.8);
 
@@ -476,7 +472,8 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--border-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250 cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -681,14 +678,12 @@ body {
 
 }
 
-.portfolio-item:hover .portfolio-top-text {
-    transform: translateY(0);
 
-}
 
 .portfolio-link {
     display: block;
     transition: bpx-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .portfolio-container {
@@ -725,6 +720,10 @@ body {
         0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.portfolio-link:hover .portfolio-top-text,
+.portfolio-link:focus .portfolio-top-text {
+    transform: translateY(0);
+}
 
 
 .portfolio-info {
@@ -785,7 +784,7 @@ body {
     width: 30px;
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: var(--primary-white-color);
+    background-color: transparent;
     border-radius: 50%;
     position: absolute;
     top: 8px;
