@@ -424,7 +424,8 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--border-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .network:focus,
@@ -850,6 +851,7 @@ body {
     transform: translate(-50%, -50%) scale(0);
 }
 
+
 .modal-button {
     width: 30px;
     height: 30px;
@@ -867,6 +869,23 @@ body {
 
 }
 
+.modal-close-icon {
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Меняет цвет svg при hover и focus */
+.modal-close-icon svg:hover,
+.modal-close-icon svg:focus {
+    stroke: var(--accent-color);
+    fill: var(--accent-color);
+}
+
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+    stroke: var(--accent-color);
+    fill: var(--accent-color);
+}
+
 .is-hidden {
     /*Комбинация для скрытия элементов */
     opacity: 0;
@@ -876,4 +895,152 @@ body {
     pointer-events: none;
     /* Избегает попадания случайным кликом */
 
+}
+
+.backdrop-text {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+}
+
+.form-field {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 41px;
+    margin-right: 39px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.form-field input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    height: 40px;
+    cursor: pointer;
+    padding-left: 42px;
+    outline-color: var(--accent-color);
+
+
+}
+
+.form-field label {
+    margin-bottom: 4px;
+    color: var(--text-color);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+}
+
+
+
+
+
+.form-icon {
+    position: absolute;
+    bottom: 50%;
+    left: 12px;
+    transform: translateY(100%);
+    fill: currentColor;
+}
+
+textarea {
+    resize: none;
+    cursor: pointer;
+    outline-color: var(--accent-color);
+}
+
+.form-field textarea {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+
+textarea::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+
+}
+
+
+.checkbox-backdrop input[type="checkbox"] {
+    width: 16px;
+    height: 15px;
+
+}
+
+.checkbox-backdrop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+}
+
+.checkbox-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+    margin-left: 8px;
+
+}
+
+.checkbox-link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+    margin-left: 4px;
+}
+
+.checkbox-button {
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    padding: 10px 52px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--primary-white-color);
+    margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.checkbox-button:hover,
+.checkbox-button:focus {
+    background: var(--background-hero-button);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
